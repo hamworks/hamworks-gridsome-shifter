@@ -1,20 +1,20 @@
 <template>
   <Layout>
-    <div class="subvisual">
-      <div class="subvisual__img"><img src="/wp-content/uploads/2019/12/subvisual.jpg" alt=""></div>
-      <div class="subvisual__inner">
-        <div class="subvisual__text">
-          <h2 class="subvisual__title" v-html="$page.wordPressPage.title" />
-          <p class="subvisual__subtitle"></p>
-        </div>
-      </div>
-    </div>
-    <img
-      v-if="$page.wordPressPage.featuredMedia"
-      :src="$page.wordPressPage.featuredMedia.sourceUrl"
-      :width="$page.wordPressPage.featuredMedia.mediaDetails.width"
-      :alt="$page.wordPressPage.featuredMedia.altText"
-    />
+<!--    <div class="subvisual">-->
+<!--      <div class="subvisual__img"><img src="/wp-content/uploads/2019/12/subvisual.jpg" alt=""></div>-->
+<!--      <div class="subvisual__inner">-->
+<!--        <div class="subvisual__text">-->
+<!--          <h2 class="subvisual__title" v-html="$page.wordPressPage.title" />-->
+<!--          <p class="subvisual__subtitle"></p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <img-->
+<!--      v-if="$page.wordPressPage.featuredMedia"-->
+<!--      :src="$page.wordPressPage.featuredMedia.sourceUrl"-->
+<!--      :width="$page.wordPressPage.featuredMedia.mediaDetails.width"-->
+<!--      :alt="$page.wordPressPage.featuredMedia.altText"-->
+<!--    />-->
     <div v-html="$page.wordPressPage.content"/>
   </Layout>
 </template>
@@ -24,13 +24,7 @@
     wordPressPage(id: $id) {
       title
       content
-      featuredMedia {
-        sourceUrl
-        altText
-        mediaDetails {
-          width
-        }
-      }
+
     }
   }
 </page-query>
