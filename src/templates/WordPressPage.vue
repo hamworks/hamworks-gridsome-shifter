@@ -20,19 +20,19 @@
 </template>
 
 <page-query>
-query WordPressPage ($id: ID!) {
-  wordPressPage(id: $id) {
-    title
-    content
-    featuredMedia {
-      sourceUrl
-      altText
-      mediaDetails {
-        width
+  query WordPressPage($id: ID!) {
+    wordPressPage(id: $id) {
+      title
+      content
+      featuredMedia {
+        sourceUrl
+        altText
+        mediaDetails {
+          width
+        }
       }
     }
   }
-}
 </page-query>
 
 <script>

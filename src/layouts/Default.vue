@@ -10,12 +10,12 @@
 	@import url('../assets/css/main.css');
 </style>
 <page-query>
-query Metadata {
-	metadata{
-		siteName
-		siteDescription
-	}
-}
+  query Metadata {
+    metadata {
+      siteName
+      siteDescription
+    }
+  }
 </page-query>
 <script>
 import Header from './parts/Header';

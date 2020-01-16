@@ -20,8 +20,6 @@
 			</nav>
 		</div><!-- /.header__inner -->
 	</header>
-
-
 </template>
 
 <static-query>
@@ -30,13 +28,13 @@ query {
 		siteName
 	}
 	allWordPressPage {
-	edges {
-	node {
-	id
-	path
-	title
-	}
-	}
+		edges {
+			node {
+				id
+				path
+				title
+			}
+		}
 	}
 }
 </static-query>
