@@ -1,0 +1,12 @@
+{
+    "name": "hamworks-gridsome-shifter",
+    "schemaPath": "hamworks-shifter.graphql",
+    "extensions": {
+        "endpoints": {
+            "hamworks-shifter": {
+                "url": "http://localhost:8080/___graphql",
+                "introspect": true
+            }
+        }
+    }
+}
