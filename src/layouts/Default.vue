@@ -18,8 +18,8 @@
   }
 </page-query>
 <script>
-import Header from './parts/Header';
-import Footer from './parts/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default {
 	components: { Footer, Header }

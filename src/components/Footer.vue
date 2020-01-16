@@ -4,10 +4,7 @@
 			<div class="footer__inner">
 				<div class="footer__inner">
 					<div class="fnav">
-						<ul id="footer-nav" class="fnav__list">
-							<li><a href="/about/">ABOUT US</a></li>
-							<li><a href="/service/">SERVICE</a></li>
-						</ul>
+						<PageLinks class="fnav__list" />
 					</div>
 					<div class="sns">
 						<ul id="sns-nav" class="sns__list">
@@ -29,15 +26,17 @@
 			</div>
 			<div class="footer__inner">
 				<div class="copyright"><small>© HAMWORKS Co., Ltd.</small></div>
-				<div class="footer__hamrobo"><img src="../../assets/images/hamrobo.svg" alt=""></div>
+				<div class="footer__hamrobo"><img src="../assets/images/hamrobo.svg" alt=""></div>
 			</div><!-- /.footer__inner -->
 		</div><!-- /.footer__bottom -->
 	</footer>
 </template>
 
 <script>
+import PageLinks from './PageLinks';
 export default {
-	name: 'Footer'
+	name: 'Footer',
+	components: { PageLinks }
 };
 </script>
 
