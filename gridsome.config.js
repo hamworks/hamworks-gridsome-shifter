@@ -1,6 +1,20 @@
+const postcssPresetEnv = require( 'postcss-preset-env' );
+const postcssPlugins = [
+  postcssPresetEnv( {
+    stage: 3,
+    features: {
+      'nesting-rules': true,
+      'custom-media-queries': true,
+    },
+    autoprefixer: {
+      grid: true,
+    },
+  } ),
+]
+
 module.exports = {
-  siteName: 'Gridsome',
-  siteDescription: 'A WordPress starter for Gridsome',
+  siteName: 'HAMWORKS',
+  siteDescription: '札幌のウェブサイト制作・ホームページ制作会社の株式会社 HAMWORKS（ハムワークス）',
 
   templates: {
     //WordPressPost: '/:year/:month/:day/:id', //adds route for "post" post type (Optional)
@@ -13,7 +27,13 @@ module.exports = {
       }
     ]
   },
-
+  css: {
+    loaderOptions: {
+      postcss: {
+        plugins: postcssPlugins
+      }
+    }
+  },
   plugins: [
     {
       use: '@gridsome/source-wordpress',

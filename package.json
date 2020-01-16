@@ -9,5 +9,8 @@
   "dependencies": {
     "@gridsome/source-wordpress": "^0.5.2",
     "gridsome": "^0.7.12"
+  },
+  "devDependencies": {
+    "postcss-preset-env": "^6.7.0"
   }
 }
