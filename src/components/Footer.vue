@@ -2,20 +2,18 @@
 	<footer class="footer">
 		<div class="footer__nav">
 			<div class="footer__inner">
-				<div class="footer__inner">
-					<div class="fnav">
-						<PageLinks class="fnav__list" />
-					</div>
-					<div class="sns">
-						<ul id="sns-nav" class="sns__list">
-							<li class="twitter">
-								<a target="_blank" rel="noopener noreferrer"
-								href="https://twitter.com/hamworks">Twitter</a></li>
-							<li class="facebook">
-								<a target="_blank" rel="noopener noreferrer"
-								href="https://www.facebook.com/hamworks.co.ltd/">facebook</a></li>
-						</ul>
-					</div>
+				<div class="fnav">
+					<PageLinks class="fnav__list" />
+				</div>
+				<div class="sns">
+					<ul id="sns-nav" class="sns__list">
+						<li class="twitter">
+							<a target="_blank" rel="noopener noreferrer"
+							   href="https://twitter.com/hamworks">Twitter</a></li>
+						<li class="facebook">
+							<a target="_blank" rel="noopener noreferrer"
+							   href="https://www.facebook.com/hamworks.co.ltd/">facebook</a></li>
+					</ul>
 				</div>
 			</div><!-- /.footer__inner -->
 		</div><!-- /.footer__nav -->
