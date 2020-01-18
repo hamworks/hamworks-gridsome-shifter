@@ -1,4 +1,5 @@
 #!/bin/bash -x
+env
 echo "start shifter"
 RESULT=$(python3 ./shifter/run.py start)
 echo $RESULT

@@ -10,7 +10,30 @@ const postcssPlugins = [
       grid: true,
     },
   } ),
-]
+];
+
+const context = process.env.CONTEXT || 'develop';
+
+const plugins = [
+  {
+    use: '@gridsome/source-wordpress',
+    options: {
+      baseUrl: process.env.CONTAINER_URL,
+      typeName: 'WordPress', // GraphQL schema name (Optional)
+    }
+  },
+];
+
+if ( context === 'production' ) {
+  plugins.push(
+      {
+        use: '@gridsome/plugin-google-analytics',
+        options: {
+          id: 'UA-XXXXXXXXX-X'
+        }
+      }
+  )
+}
 
 module.exports = {
   siteName: 'HAMWORKS',
@@ -34,13 +57,5 @@ module.exports = {
       }
     }
   },
-  plugins: [
-    {
-      use: '@gridsome/source-wordpress',
-      options: {
-        baseUrl: process.env.CONTAINER_URL,
-        typeName: 'WordPress', // GraphQL schema name (Optional)
-      }
-    }
-  ]
+  plugins: plugins
 }
