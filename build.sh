@@ -1,8 +1,8 @@
 #!/bin/bash -x
 env
 
-pip install -r ./shifter/requirements.txt
+pip3 install -r ./shifter/requirements.txt
 
-python ./shifter/run.py start
+python3 ./shifter/run.py start
 npm run build
 python ./shifter/run.py stop
