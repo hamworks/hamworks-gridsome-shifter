@@ -7,5 +7,4 @@ export CONTAINER_URL=$(node ./shifter/getContainerURL.js "$RESULT")
 echo "shifter: $CONTAINER_URL"
 echo "build"
 npm run build
-echo "stop shifter"
-python3 ./shifter/run.py stop
+
