@@ -1,11 +1,8 @@
 #!/bin/bash -x
 env
 
-if [ "${INCOMING_HOOK_BODY}" == "" ] ; then
-  echo 'No webhook'
-  exit 0
-fi
+pip install -r ./shifter/requirements.txt
 
-echo "${INCOMING_HOOK_BODY}" | jq -r .CONTAINER_URL
-export CONTAINER_URL=$(echo "${INCOMING_HOOK_BODY}" | jq -r .CONTAINER_URL)
+python ./shifter/run.py start
 npm run build
+python ./shifter/run.py stop
