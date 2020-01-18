@@ -8,6 +8,7 @@
     "lint": "eslint ./src/**/*.*"
   },
   "dependencies": {
+    "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/source-wordpress": "^0.5.2",
     "gridsome": "^0.7.12",
     "postcss-preset-env": "^6.7.0",
