@@ -1,6 +1,6 @@
 #!/bin/bash -x
 echo "start shifter"
-RESULT=$(python ./shifter/run.py start)
+RESULT=$(python3 ./shifter/run.py start)
 echo $RESULT
 echo "parse url"
 export CONTAINER_URL=$(node ./shifter/getContainerURL.js "$RESULT")
