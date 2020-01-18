@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Merge to Preview
+      uses: devmasx/merge-branch@v1.1.0
+      with:
+        type: now
+        target_branch: 'preview'
+      env:
+        GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
