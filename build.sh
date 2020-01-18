@@ -1,8 +1,11 @@
 #!/bin/bash -x
-
+echo "start shifter"
 RESULT=$(python ./shifter/run.py start)
-regexp="::set-output name=shifter_app_url::(https://[0-9a-zA-Z?=#+-_&:/.%]*\.io:[0-9]+)"
-[[ ${RESULT} =~ $regexp ]]
-export CONTAINER_URL=${BASH_REMATCH[1]}
+echo $RESULT
+echo "parse url"
+export CONTAINER_URL=$(node ./shifter/getContainerURL.js "$RESULT")
+echo "shifter: $CONTAINER_URL"
+echo "build"
 npm run build
-python ./shifter/run.py stop
+echo "stop shifter"
+python3 ./shifter/run.py stop
